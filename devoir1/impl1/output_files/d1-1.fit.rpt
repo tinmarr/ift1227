@@ -1,5 +1,5 @@
 Fitter report for d1-1
-Thu Feb  1 17:05:00 2024
+Mon Feb  5 11:50:37 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -36,7 +36,6 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  28. Fitter Device Options
  29. Operating Settings and Conditions
  30. Fitter Messages
- 31. Fitter Suppressed Messages
 
 
 
@@ -63,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Feb  1 17:05:00 2024       ;
+; Fitter Status                      ; Successful - Mon Feb  5 11:50:37 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; d1-1                                        ;
 ; Top-level Entity Name              ; d1-1                                        ;
@@ -149,12 +148,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.1%      ;
+;     Processors 2-12        ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -244,7 +243,7 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.0% / 0.0% / 0.1%    ;
+; Peak interconnect usage (total/H/V)         ; 0.1% / 0.0% / 0.1%    ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out                  ; 17                    ;
 ; Total fan-out                               ; 22                    ;
@@ -330,10 +329,10 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; A    ; W9    ; 3        ; 22           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; B    ; AB2   ; 3        ; 22           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; C    ; AB3   ; 3        ; 22           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; D    ; W6    ; 3        ; 16           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; A    ; C10   ; 7        ; 51           ; 54           ; 28           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; B    ; C11   ; 7        ; 51           ; 54           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; C    ; D12   ; 7        ; 51           ; 54           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; D    ; C12   ; 7        ; 54           ; 54           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -342,8 +341,8 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; V    ; Y7    ; 3        ; 20           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; notV ; Y8    ; 3        ; 20           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; V    ; A8    ; 7        ; 46           ; 54           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; notV ; A9    ; 7        ; 46           ; 54           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -371,11 +370,11 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; 1A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ;
 ; 1B       ; 4 / 24 ( 17 % ) ; 2.5V          ; --           ;
 ; 2        ; 0 / 36 ( 0 % )  ; 2.5V          ; --           ;
-; 3        ; 6 / 48 ( 13 % ) ; 2.5V          ; --           ;
+; 3        ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 40 ( 0 % )  ; 2.5V          ; --           ;
 ; 6        ; 0 / 60 ( 0 % )  ; 2.5V          ; --           ;
-; 7        ; 0 / 52 ( 0 % )  ; 2.5V          ; --           ;
+; 7        ; 6 / 52 ( 12 % ) ; 2.5V          ; --           ;
 ; 8        ; 4 / 36 ( 11 % ) ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -392,8 +391,8 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; A5       ; 473        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A6       ; 471        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A7       ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; A8       ; 447        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; A9       ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; A8       ; 447        ; 7        ; V                                              ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; A9       ; 449        ; 7        ; notV                                           ; output ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A10      ; 439        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A11      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; A12      ; 435        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -430,8 +429,8 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; AA21     ; 245        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA22     ; 247        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB1      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; AB2      ; 145        ; 3        ; B                                              ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB3      ; 147        ; 3        ; C                                              ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB2      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; AB3      ; 147        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB4      ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB5      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB6      ; 161        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -482,9 +481,9 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; C7       ; 467        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C8       ; 465        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ; 450        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C10      ; 442        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C11      ; 440        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C12      ; 436        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; C10      ; 442        ; 7        ; A                                              ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; C11      ; 440        ; 7        ; B                                              ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
+; C12      ; 436        ; 7        ; D                                              ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C13      ; 426        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C14      ; 424        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 418        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -506,7 +505,7 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; D9       ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D10      ; 476        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D11      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; D12      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; D12      ; 438        ; 7        ; C                                              ; input  ; 2.5 V                 ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D13      ; 431        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D14      ; 428        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 404        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -830,10 +829,10 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; W3       ; 134        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W4       ; 132        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W5       ; 124        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; W6       ; 126        ; 3        ; D                                              ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; W6       ; 126        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W7       ; 148        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W8       ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; W9       ; 144        ; 3        ; A                                              ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; W9       ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W10      ; 146        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W11      ; 173        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; W12      ; 193        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -853,8 +852,8 @@ The pin-out file can be found in /home/martin/coding/ift1227/devoir1/impl1/outpu
 ; Y4       ; 151        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y5       ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y6       ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; Y7       ; 141        ; 3        ; V                                              ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; Y8       ; 143        ; 3        ; notV                                           ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y7       ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; Y8       ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y9       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 168        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y11      ; 175        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -884,12 +883,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; B        ; Incomplete set of assignments ;
 ; C        ; Incomplete set of assignments ;
 ; A        ; Incomplete set of assignments ;
-; V        ; Missing location assignment   ;
-; notV     ; Missing location assignment   ;
-; D        ; Missing location assignment   ;
-; B        ; Missing location assignment   ;
-; C        ; Missing location assignment   ;
-; A        ; Missing location assignment   ;
 +----------+-------------------------------+
 
 
@@ -911,9 +904,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; V    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; notV ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; D    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; B    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; C    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; A    ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; B    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; C    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; A    ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -924,11 +917,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; D                   ;                   ;         ;
 ; B                   ;                   ;         ;
-;      - SOP~0        ; 1                 ; 6       ;
+;      - SOP~0        ; 0                 ; 6       ;
 ; C                   ;                   ;         ;
-;      - SOP~0        ; 1                 ; 6       ;
+;      - SOP~0        ; 0                 ; 6       ;
 ; A                   ;                   ;         ;
-;      - SOP~0        ; 1                 ; 6       ;
+;      - SOP~0        ; 0                 ; 6       ;
 +---------------------+-------------------+---------+
 
 
@@ -937,15 +930,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 8 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 9 / 148,641 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 5,382 ( 0 % )     ;
-; C4 interconnects      ; 9 / 106,704 ( < 1 % ) ;
-; Direct links          ; 1 / 148,641 ( < 1 % ) ;
+; C4 interconnects      ; 8 / 106,704 ( < 1 % ) ;
+; Direct links          ; 0 / 148,641 ( 0 % )   ;
 ; Global clocks         ; 0 / 20 ( 0 % )        ;
 ; Local interconnects   ; 0 / 49,760 ( 0 % )    ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )       ;
 ; R24 interconnects     ; 0 / 5,406 ( 0 % )     ;
-; R4 interconnects      ; 0 / 147,764 ( 0 % )   ;
+; R4 interconnects      ; 2 / 147,764 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -1011,10 +1004,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I/O Rules Statistic              ; Total ;
 +----------------------------------+-------+
 ; Total I/O Rules                  ; 30    ;
-; Number of I/O Rules Passed       ; 9     ;
+; Number of I/O Rules Passed       ; 12    ;
 ; Number of I/O Rules Failed       ; 0     ;
 ; Number of I/O Rules Unchecked    ; 0     ;
-; Number of I/O Rules Inapplicable ; 21    ;
+; Number of I/O Rules Inapplicable ; 18    ;
 +----------------------------------+-------+
 
 
@@ -1024,12 +1017,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Status       ; ID        ; Category                          ; Rule Description                                                                                     ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.                    ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
-; Inapplicable ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
-; Inapplicable ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                                     ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                                  ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                                                 ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                                       ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
 ; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.                               ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                                           ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
@@ -1057,22 +1050,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
-; Pin/Rules          ; IO_000002    ; IO_000001    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 6         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 4            ; 2            ; 0            ; 4            ; 0            ; 0            ; 2            ; 0            ; 6         ; 6         ; 6         ; 0            ; 0            ;
-; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 6            ; 6            ; 6            ; 6            ; 6            ; 0         ; 6            ; 6            ; 6            ; 6            ; 6            ; 6            ; 6            ; 4            ; 6            ; 6            ; 6            ; 2            ; 4            ; 6            ; 2            ; 6            ; 6            ; 4            ; 6            ; 0         ; 0         ; 0         ; 6            ; 6            ;
-; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
-; V                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; notV               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; D                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; B                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; C                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; A                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-+--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
+; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
+; Total Pass         ; 0            ; 6         ; 6         ; 0            ; 0            ; 6         ; 6         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 4            ; 2            ; 0            ; 4            ; 0            ; 0            ; 2            ; 0            ; 6         ; 6         ; 6         ; 0            ; 0            ;
+; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
+; Total Inapplicable ; 6            ; 0         ; 0         ; 6            ; 6            ; 0         ; 0         ; 6            ; 6            ; 6            ; 6            ; 6            ; 6            ; 4            ; 6            ; 6            ; 6            ; 2            ; 4            ; 6            ; 2            ; 6            ; 6            ; 4            ; 6            ; 0         ; 0         ; 0         ; 6            ; 6            ;
+; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
+; V                  ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; notV               ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; D                  ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; B                  ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; C                  ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; A                  ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
 
 
 +-------------------------------------------------------------------------------------------+
@@ -1150,7 +1143,6 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 6 pins of 6 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'd1-1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1161,20 +1153,6 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 6 (unused VREF, 2.5V VCCIO, 4 input, 2 output, 0 bidirectional)
-        Info (176212): I/O standards used: 2.5 V.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  16 pins available
-        Info (176213): I/O bank number 1B does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  20 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  36 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  48 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  48 pins available
-        Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
-        Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  60 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  52 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  32 pins available
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -1184,7 +1162,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y44 to location X44_Y54
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
@@ -1194,18 +1172,11 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file /home/martin/coding/ift1227/devoir1/impl1/output_files/d1-1.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1696 megabytes
-    Info: Processing ended: Thu Feb  1 17:05:00 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:17
-
-
-+----------------------------+
-; Fitter Suppressed Messages ;
-+----------------------------+
-The suppressed messages can be found in /home/martin/coding/ift1227/devoir1/impl1/output_files/d1-1.fit.smsg.
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 1695 megabytes
+    Info: Processing ended: Mon Feb  5 11:50:38 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:11
 
 
