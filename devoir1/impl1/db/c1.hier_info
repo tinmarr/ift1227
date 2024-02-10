@@ -1,0 +1,12 @@
+|c1
+V <= SOP.DB_MAX_OUTPUT_PORT_TYPE
+A => AB.IN0
+A => AC.IN0
+B => AB.IN1
+B => BC.IN0
+C => BC.IN1
+C => AC.IN1
+notV <= not.DB_MAX_OUTPUT_PORT_TYPE
+D => ~NO_FANOUT~
+
+

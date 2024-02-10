@@ -1,10 +1,10 @@
 |c2
-LEDR0 <= mux4:inst.result
-SW0 => mux4:inst.sel[0]
-SW1 => mux4:inst.sel[1]
-SW2 => mux4:inst.sel[2]
-SW3 => mux4:inst.sel[3]
-LEDR1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+V <= mux4:inst.result
+A => mux4:inst.sel[0]
+B => mux4:inst.sel[1]
+C => mux4:inst.sel[2]
+D => mux4:inst.sel[3]
+notV <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |c2|mux4:inst
