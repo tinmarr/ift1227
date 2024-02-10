@@ -2,10 +2,11 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{parskip}
 \usepackage{amssymb}
+\usepackage{graphicx}
 
 
 \title{Devoir 1}
-\author{Martin Chaperot: 20205638\\ Hamza Ali Ousalah: }
+\author{Martin Chaperot: 20205638\\ Hamza Ali Ousalah: 20249230}
 \date{}
 
 \begin{document}
@@ -26,7 +27,7 @@
     6  & 0 & 1 & 1 & 0 & 1 \\
     7  & 0 & 1 & 1 & 1 & 1 \\
     8  & 1 & 0 & 0 & 0 & 0 \\
-    9  & 1 & 0 & 0 & 1 & 1 \\
+    9  & 1 & 0 & 0 & 1 & 0 \\
     10 & 1 & 0 & 1 & 0 & 1 \\
     11 & 1 & 0 & 1 & 1 & 1 \\
     12 & 1 & 1 & 0 & 0 & 1 \\
@@ -37,60 +38,74 @@
 \end{tabular}
 
 \section*{(b) SOP de la fonction V}
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \# de 1 & Minterm                 & Binaire                      & Taille 2             & Taille 4 \\
-        \hline
-        1       & -----                   & -----                        & -----                & -----    \\
-        \hline
-        2       & \begin{tabular}{c}
-                      m6 \\ m10 \\ m12
-                  \end{tabular}      & \begin{tabular}{c}
-                                           0110 \\ 1010 \\ 1100
-                                       \end{tabular}         & \begin{tabular}{c|c}
-                                                                   m(6,7)   & 011- \\
-                                                                   m(10,11) & 101- \\
-                                                                   m(12,13) & 110-
-                                                               \end{tabular} & \begin{tabular}{c|c}
-                                                                                   m(10,11,14,15) & 1-1- * \\
-                                                                                   m(6,7,14,15)   & -11- * \\
-                                                                                   m(12,13,14,15) & 11-- *
-                                                                               \end{tabular}     \\
-        \hline
-        3       & \begin{tabular}{c}
-                      m7 \\ m11 \\ m13 \\ m14
-                  \end{tabular} & \begin{tabular}{c}
-                                      0111 \\ 1011 \\ 1101 \\ 1110
-                                  \end{tabular} & \begin{tabular}{c|c}
-                                                               &      \\
-                                                               &      \\
-                                                      m(14,15) & 111- \\
-                                                               &      \\
-                                                               &      \\
-                                                  \end{tabular} & -----                                    \\
-        \hline
-        4       & m15                     & 1111                         & -----                & -----    \\
-        \hline
-    \end{tabular}
-    \caption{Table de minterms}
-\end{table}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multicolumn{5}{|c|}{Initial Setup}     \\
+    \hline
+    Minterm & A     & B     & C     & D     \\
+    \hline
+    -----   & ----- & ----- & ----- & ----- \\
+    \hline
+    m6      & 0     & 1     & 1     & 0     \\
+    m10     & 1     & 0     & 1     & 0     \\
+    m12     & 1     & 1     & 0     & 0     \\
+    \hline
+    m7      & 0     & 1     & 1     & 1     \\
+    m11     & 1     & 0     & 1     & 1     \\
+    m13     & 1     & 1     & 0     & 1     \\
+    m14     & 1     & 1     & 1     & 0     \\
+    \hline
+    m15     & 1     & 1     & 1     & 1     \\
+    \hline
+\end{tabular}
+\quad
+\begin{tabular}{|cccc|}
+    \hline
+    \multicolumn{4}{|c|}{First Reduction} \\
+    \hline
+    A & B & C & D                         \\
+    \hline
+    0 & 1 & 1 & -                         \\
+    1 & 0 & 1 & -                         \\
+    1 & 1 & 0 & -                         \\
+    \hline
+    1 & 1 & 1 & -                         \\
+    \hline
+\end{tabular}
+\quad
+\begin{tabular}{|ccccc|}
+    \hline
+    \multicolumn{5}{|c|}{Second Reduction} \\
+    \hline
+    A & B & C & D &                        \\
+    \hline
+    1 & - & 1 & - & *                      \\
+    - & 1 & 1 & - & *                      \\
+    1 & 1 & - & - & *                      \\
+    \hline
+\end{tabular}
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-        \hline
-        Implicant      & m6             & m7             & m10            & m11            & m12            & m13            & m14              & m15              \\
-        \hline
-        m(10,11,14,15) &                &                & \(\checkmark\) & \(\checkmark\) &                &                & \( \checkmark \) & \( \checkmark \) \\
-        m(10,11,14,15) & \(\checkmark\) & \(\checkmark\) &                &                &                &                & \( \checkmark \) & \( \checkmark \) \\
-        m(10,11,14,15) &                &                &                &                & \(\checkmark\) & \(\checkmark\) & \( \checkmark \) & \( \checkmark \) \\
-        \hline
-    \end{tabular}
-    \caption{Prime Implicants}
-\end{table}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+                     & \multicolumn{8}{|c|}{Minterms}                                                                                                                            \\
+    \cline{2-9}
+    Prime Implicants & 0110                           & 0111           & 1010           & 1011           & 1100           & 1101           & 1110             & 1111             \\
+    \hline
+    1-1-             &                                &                & \(\checkmark\) & \(\checkmark\) &                &                & \( \checkmark \) & \( \checkmark \) \\
+    -11-             & \(\checkmark\)                 & \(\checkmark\) &                &                &                &                & \( \checkmark \) & \( \checkmark \) \\
+    11--             &                                &                &                &                & \(\checkmark\) & \(\checkmark\) & \( \checkmark \) & \( \checkmark \) \\
+    \hline
+\end{tabular}
 
 \(V(A,B,C,D) = AC + BC + AB\)
+
+\section*{(c) Implementation}
+\subsection*{1}
+\includegraphics*[width=\textwidth]{impl1}
+\subsection*{2}
+\includegraphics*[width=\textwidth]{impl2}
+\subsection*{3}
+\includegraphics*[width=\textwidth]{impl3}
+
 
 \end{document}
