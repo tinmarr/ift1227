@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Feb 10 14:13:02 2024
-Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Tue Feb 13 11:12:29 2024
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : c2
 Top-level Entity Name : c2
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 1
+    Total combinational functions : 1
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 6

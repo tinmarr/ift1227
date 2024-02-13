@@ -1,6 +1,6 @@
 Analysis & Synthesis report for c2
-Sat Feb 10 14:13:02 2024
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Tue Feb 13 11:12:29 2024
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -25,7 +25,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 10 14:13:02 2024       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 13 11:12:29 2024       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; c2                                          ;
 ; Top-level Entity Name              ; c2                                          ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 1                                           ;
+;     Total combinational functions  ; 1                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 6                                           ;
@@ -156,7 +156,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 10          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,60 +166,64 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
-; mux4.v                           ; yes             ; User Wizard-Generated File         ; /home/martin/coding/ift1227/devoir1/impl2/mux4.v                   ;         ;
-; c2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; /home/martin/coding/ift1227/devoir1/impl2/c2.bdf                   ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
-; aglobal211.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/aglobal211.inc ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/muxlut.inc     ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/bypassff.inc   ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/altshift.inc   ;         ;
-; db/mux_l7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/martin/coding/ift1227/devoir1/impl2/db/mux_l7c.tdf           ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; mux4.v                           ; yes             ; User Wizard-Generated File         ; /home/martin/coding/ift1227/devoir1/impl2/mux4.v                           ;         ;
+; c2.bdf                           ; yes             ; User Block Diagram/Schematic File  ; /home/martin/coding/ift1227/devoir1/impl2/c2.bdf                           ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                       ; /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/aglobal211.inc ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/muxlut.inc     ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/bypassff.inc   ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/altshift.inc   ;         ;
+; db/mux_06c.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/martin/coding/ift1227/devoir1/impl2/db/mux_06c.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-;                                             ;          ;
-; Total combinational functions               ; 0        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 0        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 6        ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; V~output ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 6        ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                               ;
++---------------------------------------------+-----------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                       ;
++---------------------------------------------+-----------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 1                                                                           ;
+;                                             ;                                                                             ;
+; Total combinational functions               ; 1                                                                           ;
+; Logic element usage by number of LUT inputs ;                                                                             ;
+;     -- 4 input functions                    ; 0                                                                           ;
+;     -- 3 input functions                    ; 1                                                                           ;
+;     -- <=2 input functions                  ; 0                                                                           ;
+;                                             ;                                                                             ;
+; Logic elements by mode                      ;                                                                             ;
+;     -- normal mode                          ; 1                                                                           ;
+;     -- arithmetic mode                      ; 0                                                                           ;
+;                                             ;                                                                             ;
+; Total registers                             ; 0                                                                           ;
+;     -- Dedicated logic registers            ; 0                                                                           ;
+;     -- I/O registers                        ; 0                                                                           ;
+;                                             ;                                                                             ;
+; I/O pins                                    ; 6                                                                           ;
+;                                             ;                                                                             ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                           ;
+;                                             ;                                                                             ;
+; Maximum fan-out node                        ; mux4:inst|lpm_mux:LPM_MUX_component|mux_06c:auto_generated|result_node[0]~0 ;
+; Maximum fan-out                             ; 2                                                                           ;
+; Total fan-out                               ; 11                                                                          ;
+; Average fan-out                             ; 0.85                                                                        ;
++---------------------------------------------+-----------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |c2                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |c2                 ; c2          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                            ; Entity Name ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-------------+--------------+
+; |c2                               ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |c2                                                            ; c2          ; work         ;
+;    |mux4:inst|                    ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |c2|mux4:inst                                                  ; mux4        ; work         ;
+;       |lpm_mux:LPM_MUX_component| ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |c2|mux4:inst|lpm_mux:LPM_MUX_component                        ; lpm_mux     ; work         ;
+;          |mux_06c:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |c2|mux4:inst|lpm_mux:LPM_MUX_component|mux_06c:auto_generated ; mux_06c     ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -257,10 +261,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                  ;
 ; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                ;
 ; LPM_WIDTH              ; 1       ; Signed Integer                                ;
-; LPM_SIZE               ; 16      ; Signed Integer                                ;
-; LPM_WIDTHS             ; 4       ; Signed Integer                                ;
+; LPM_SIZE               ; 4       ; Signed Integer                                ;
+; LPM_WIDTHS             ; 2       ; Signed Integer                                ;
 ; LPM_PIPELINE           ; 0       ; Untyped                                       ;
-; CBXI_PARAMETER         ; mux_l7c ; Untyped                                       ;
+; CBXI_PARAMETER         ; mux_06c ; Untyped                                       ;
 ; DEVICE_FAMILY          ; MAX 10  ; Untyped                                       ;
 +------------------------+---------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -274,10 +278,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 6                           ;
 ; cycloneiii_lcell_comb ; 2                           ;
 ;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 2.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -295,30 +300,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sat Feb 10 14:12:58 2024
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Tue Feb 13 11:12:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off c2 -c c2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.v
     Info (12023): Found entity 1: mux4 File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file c2.bdf
     Info (12023): Found entity 1: c2
 Info (12127): Elaborating entity "c2" for the top level hierarchy
+Warning (275009): Pin "D" not connected
 Info (12128): Elaborating entity "mux4" for hierarchy "mux4:inst"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux4:inst|lpm_mux:LPM_MUX_component" File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 110
-Info (12130): Elaborated megafunction instantiation "mux4:inst|lpm_mux:LPM_MUX_component" File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 110
-Info (12133): Instantiated megafunction "mux4:inst|lpm_mux:LPM_MUX_component" with the following parameter: File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 110
-    Info (12134): Parameter "lpm_size" = "16"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "mux4:inst|lpm_mux:LPM_MUX_component" File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 74
+Info (12130): Elaborated megafunction instantiation "mux4:inst|lpm_mux:LPM_MUX_component" File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 74
+Info (12133): Instantiated megafunction "mux4:inst|lpm_mux:LPM_MUX_component" with the following parameter: File: /home/martin/coding/ift1227/devoir1/impl2/mux4.v Line: 74
+    Info (12134): Parameter "lpm_size" = "4"
     Info (12134): Parameter "lpm_type" = "LPM_MUX"
     Info (12134): Parameter "lpm_width" = "1"
-    Info (12134): Parameter "lpm_widths" = "4"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_l7c.tdf
-    Info (12023): Found entity 1: mux_l7c File: /home/martin/coding/ift1227/devoir1/impl2/db/mux_l7c.tdf Line: 23
-Info (12128): Elaborating entity "mux_l7c" for hierarchy "mux4:inst|lpm_mux:LPM_MUX_component|mux_l7c:auto_generated" File: /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "V" is stuck at GND
-    Warning (13410): Pin "notV" is stuck at VCC
+    Info (12134): Parameter "lpm_widths" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_06c.tdf
+    Info (12023): Found entity 1: mux_06c File: /home/martin/coding/ift1227/devoir1/impl2/db/mux_06c.tdf Line: 23
+Info (12128): Elaborating entity "mux_06c" for hierarchy "mux4:inst|lpm_mux:LPM_MUX_component|mux_06c:auto_generated" File: /home/martin/intelFPGA_lite/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "d1-1" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity "d1-1" -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity "d1-1" -section_id Top was ignored
@@ -346,18 +350,16 @@ Warning (20013): Ignored 24 assignments for entity "d1-1" -- entity does not exi
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity "d1-1" -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "A"
-    Warning (15610): No output dependent on input pin "B"
-    Warning (15610): No output dependent on input pin "C"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "D"
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 2 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 373 megabytes
-    Info: Processing ended: Sat Feb 10 14:13:02 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:13
+    Info (21061): Implemented 1 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 430 megabytes
+    Info: Processing ended: Tue Feb 13 11:12:29 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:29
 
 
