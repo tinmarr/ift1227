@@ -1,0 +1,44 @@
+# do q1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:45:04 on Mar 01,2024
+# vcom -reportprogress 300 -93 -work work /home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sillyfunction
+# -- Compiling architecture synth of sillyfunction
+# End time: 08:45:04 on Mar 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+wave create -pattern none -portmode in -language vhdl /sillyfunction/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# sillyfunction
+wave create -pattern none -portmode in -language vhdl /sillyfunction/b
+# sillyfunction
+wave create -pattern none -portmode in -language vhdl /sillyfunction/c
+# sillyfunction
+wave create -pattern none -portmode out -language vhdl /sillyfunction/y
+# sillyfunction
+force -freeze NewSig:/sillyfunction/a 1 0, 0 {50 ns} -r 100
+# Error while executing: force
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+force -freeze NewSig:/sillyfunction/a 1 0, 0 {50 ns} -r 100
+# Error while executing: force
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+force -freeze NewSig:/sillyfunction/b 1 0, 0 {100 ns} -r 200
+# Error while executing: force
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]

@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/martin/coding/ift1227/devoir2/q2/simulation/modelsim
+Edetecteur
+Z1 w1709310618
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8/home/martin/coding/ift1227/devoir2/q2/detecteur.vhd
+Z5 F/home/martin/coding/ift1227/devoir2/q2/detecteur.vhd
+l0
+L4 1
+VMIcbf9?45f6GN]fdEl17l1
+!s100 KM@Kao6:eY=kYJ@7b@TD80
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1709311971
+!i10b 1
+Z8 !s108 1709311971.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q2/detecteur.vhd|
+Z10 !s107 /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Asynth
+R2
+R3
+DEx4 work 9 detecteur 0 22 MIcbf9?45f6GN]fdEl17l1
+!i122 0
+l14
+L11 27
+VTAPoU0Y5SYnk1MP5VRLo40
+!s100 X0l12;;KN7ABlg_F4IY8S2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z13 w1709311936
+R2
+R3
+!i122 1
+R0
+Z14 8/home/martin/coding/ift1227/devoir2/q2/testbench.vhd
+Z15 F/home/martin/coding/ift1227/devoir2/q2/testbench.vhd
+l0
+L4 1
+VfAGSJh;[QX6ckNlW1jkS:2
+!s100 ZghcR5[dL31:EZO;5?S]<1
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
+!s107 /home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
+!i113 1
+R11
+R12
+Asim
+R2
+R3
+DEx4 work 9 testbench 0 22 fAGSJh;[QX6ckNlW1jkS:2
+!i122 1
+l15
+L7 44
+Vloh5k[JmPLADC8B3@<=K[2
+!s100 N?70T1?g__J7JeO;PV^=E2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+Z17 !s107 /home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
+!i113 1
+R11
+R12

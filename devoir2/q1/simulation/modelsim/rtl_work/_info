@@ -1,0 +1,52 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/martin/coding/ift1227/devoir2/q1/simulation/modelsim
+Esillyfunction
+Z1 w1709300517
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8/home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd
+Z5 F/home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd
+l0
+L4 1
+V[oIH7b7hmBMSR6gO>a:I^1
+!s100 X=S_Kk=:GJnd3mzlbb=MM0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1709300704
+!i10b 1
+Z8 !s108 1709300704.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd|
+!s107 /home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Asynth
+R2
+R3
+DEx4 work 13 sillyfunction 0 22 [oIH7b7hmBMSR6gO>a:I^1
+!i122 0
+l8
+L8 5
+VPNT>ZY5TELeYP<H]X:ICg2
+!s100 dZ3>SaE7C4a^Y`?LkP`N>2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 /home/martin/coding/ift1227/devoir2/q1/sillyfunction.vhd|
+!i113 1
+R10
+R11

@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity afficheur is
+	port (
+		c : in std_logic_vector(7 downto 0);
+		affS : out std_logic_vector(6 downto 0);
+		affCh : out std_logic_vector(6 downto 0);
+	);
+end;
+
+architecture behavioral of afficheur is
+begin
+	process(c)
+	begin
+		
+	end process;
+end behavioral;
