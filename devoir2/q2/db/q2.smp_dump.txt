@@ -1,8 +1,8 @@
 
 State Machine - |detecteur|state
-Name state.S4 state.S3 state.S2 state.S1 state.S0 
-state.S0 0 0 0 0 0 
-state.S1 0 0 0 1 1 
-state.S2 0 0 1 0 1 
-state.S3 0 1 0 0 1 
-state.S4 1 0 0 0 1 
+Name state.SE state.SD state.SC state.SB state.SA 
+state.SA 0 0 0 0 0 
+state.SB 0 0 0 1 1 
+state.SC 0 0 1 0 1 
+state.SD 0 1 0 0 1 
+state.SE 1 0 0 0 1 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for q2
-Fri Mar  1 11:52:27 2024
+Tue Mar 12 15:08:10 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -45,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar  1 11:52:27 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 12 15:08:10 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; q2                                          ;
 ; Top-level Entity Name              ; detecteur                                   ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 4                                           ;
+;     Total combinational functions  ; 3                                           ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
 ; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -159,10 +159,12 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -175,35 +177,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-;                                             ;          ;
-; Total combinational functions               ; 0        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 0        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 4        ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; q~output ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 4        ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4         ;
+;                                             ;           ;
+; Total combinational functions               ; 3         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 3         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 3         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 4         ;
+;     -- Dedicated logic registers            ; 4         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 4         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 4         ;
+; Total fan-out                               ; 23        ;
+; Average fan-out                             ; 1.53      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |detecteur                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |detecteur          ; detecteur   ; work         ;
+; |detecteur                 ; 3 (3)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |detecteur          ; detecteur   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,13 +223,13 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------+
 ; State Machine - |detecteur|state                                ;
 +----------+----------+----------+----------+----------+----------+
-; Name     ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
+; Name     ; state.SE ; state.SD ; state.SC ; state.SB ; state.SA ;
 +----------+----------+----------+----------+----------+----------+
-; state.S0 ; 0        ; 0        ; 0        ; 0        ; 0        ;
-; state.S1 ; 0        ; 0        ; 0        ; 1        ; 1        ;
-; state.S2 ; 0        ; 0        ; 1        ; 0        ; 1        ;
-; state.S3 ; 0        ; 1        ; 0        ; 0        ; 1        ;
-; state.S4 ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; state.SA ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.SB ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.SC ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.SD ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.SE ; 1        ; 0        ; 0        ; 0        ; 1        ;
 +----------+----------+----------+----------+----------+----------+
 
 
@@ -235,12 +238,8 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; state.S0                              ; Lost fanout        ;
-; state.S1                              ; Lost fanout        ;
-; state.S2                              ; Lost fanout        ;
-; state.S3                              ; Lost fanout        ;
-; state.S4                              ; Lost fanout        ;
-; Total Number of Removed Registers = 5 ;                    ;
+; state.SA                              ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -249,10 +248,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -265,12 +264,14 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 4                           ;
+; cycloneiii_lcell_comb ; 3                           ;
+;     normal            ; 3                           ;
+;         2 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -289,7 +290,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar  1 11:52:19 2024
+    Info: Processing started: Tue Mar 12 15:08:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off q2 -c q2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -300,22 +301,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
     Info (12022): Found design unit 1: testbench-sim File: /home/martin/coding/ift1227/devoir2/q2/testbench.vhd Line: 7
     Info (12023): Found entity 1: testbench File: /home/martin/coding/ift1227/devoir2/q2/testbench.vhd Line: 4
 Info (12127): Elaborating entity "detecteur" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "q" is stuck at VCC File: /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd Line: 7
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "a" File: /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd Line: 6
-    Warning (15610): No output dependent on input pin "clk" File: /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd Line: 6
-    Warning (15610): No output dependent on input pin "reset" File: /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd Line: 6
-Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 430 megabytes
-    Info: Processing ended: Fri Mar  1 11:52:27 2024
+    Info (21061): Implemented 4 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 512 megabytes
+    Info: Processing ended: Tue Mar 12 15:08:10 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 

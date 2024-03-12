@@ -11,31 +11,31 @@
 # 
 # vcom -93 -work work {/home/martin/coding/ift1227/devoir2/q2/detecteur.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:52:51 on Mar 01,2024
+# Start time: 15:08:38 on Mar 12,2024
 # vcom -reportprogress 300 -93 -work work /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity detecteur
 # -- Compiling architecture synth of detecteur
-# End time: 11:52:51 on Mar 01,2024, Elapsed time: 0:00:00
+# End time: 15:08:38 on Mar 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/martin/coding/ift1227/devoir2/q2/testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:52:51 on Mar 01,2024
+# Start time: 15:08:38 on Mar 12,2024
 # vcom -reportprogress 300 -93 -work work /home/martin/coding/ift1227/devoir2/q2/testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity testbench
 # -- Compiling architecture sim of testbench
-# End time: 11:52:51 on Mar 01,2024, Elapsed time: 0:00:00
+# End time: 15:08:39 on Mar 12,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 11:52:51 on Mar 01,2024
+# Start time: 15:08:39 on Mar 12,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -48,28 +48,18 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Error: 0 failed
-#    Time: 20 ns  Iteration: 0  Instance: /testbench
-# ** Error: 01 failed
-#    Time: 40 ns  Iteration: 0  Instance: /testbench
-# ** Error: 010 failed
-#    Time: 60 ns  Iteration: 0  Instance: /testbench
-# ** Error: 0101 failed
-#    Time: 80 ns  Iteration: 0  Instance: /testbench
-# ** Error: 01011 failed
-#    Time: 100 ns  Iteration: 0  Instance: /testbench
-# ** Error: 0101101 failed
-#    Time: 140 ns  Iteration: 0  Instance: /testbench
-# ** Error: 01011011 failed
-#    Time: 160 ns  Iteration: 0  Instance: /testbench
-# ** Error: reset failed
-#    Time: 190 ns  Iteration: 0  Instance: /testbench
+# ** Error: 010110111 failed
+#    Time: 180 ns  Iteration: 0  Instance: /testbench
 # 
 # stdin: <EOF>
 run
-run -all
-rn
-# invalid command name "rn"
 run
-# End time: 11:55:22 on Mar 01,2024, Elapsed time: 0:02:31
-# Errors: 8, Warnings: 0
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:11:13 on Mar 12,2024, Elapsed time: 0:02:34
+# Errors: 1, Warnings: 0

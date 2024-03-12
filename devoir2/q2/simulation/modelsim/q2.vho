@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
 
--- DATE "03/01/2024 11:52:43"
+-- DATE "03/12/2024 15:08:28"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -81,8 +81,10 @@ ww_devpor <= devpor;
 END structure;
 
 
+LIBRARY ALTERA;
 LIBRARY FIFTYFIVENM;
 LIBRARY IEEE;
+USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE FIFTYFIVENM.FIFTYFIVENM_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
@@ -91,15 +93,15 @@ ENTITY 	detecteur IS
 	clk : IN std_logic;
 	reset : IN std_logic;
 	a : IN std_logic;
-	q : BUFFER std_logic
+	q : OUT std_logic
 	);
 END detecteur;
 
 -- Design Ports Information
--- q	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- a	=>  Location: PIN_AB9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_J14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- reset	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- q	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- reset	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- a	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF detecteur IS
@@ -118,14 +120,27 @@ SIGNAL ww_a : std_logic;
 SIGNAL ww_q : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \a~input_o\ : std_logic;
-SIGNAL \clk~input_o\ : std_logic;
-SIGNAL \reset~input_o\ : std_logic;
+SIGNAL \reset~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \clk~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~~eoc\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC2~~eoc\ : std_logic;
 SIGNAL \q~output_o\ : std_logic;
+SIGNAL \clk~input_o\ : std_logic;
+SIGNAL \clk~inputclkctrl_outclk\ : std_logic;
+SIGNAL \a~input_o\ : std_logic;
+SIGNAL \Selector0~0_combout\ : std_logic;
+SIGNAL \reset~input_o\ : std_logic;
+SIGNAL \reset~inputclkctrl_outclk\ : std_logic;
+SIGNAL \state.SB~q\ : std_logic;
+SIGNAL \nextstate.SC~0_combout\ : std_logic;
+SIGNAL \state.SC~q\ : std_logic;
+SIGNAL \nextstate.SD~0_combout\ : std_logic;
+SIGNAL \state.SD~q\ : std_logic;
+SIGNAL \state.SE~feeder_combout\ : std_logic;
+SIGNAL \state.SE~q\ : std_logic;
+SIGNAL \ALT_INV_reset~inputclkctrl_outclk\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -147,13 +162,18 @@ ww_devpor <= devpor;
 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
 
 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
+
+\reset~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \reset~input_o\);
+
+\clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk~input_o\);
+\ALT_INV_reset~inputclkctrl_outclk\ <= NOT \reset~inputclkctrl_outclk\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: LCCOMB_X44_Y52_N16
+-- Location: LCCOMB_X44_Y52_N4
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \~QUARTUS_CREATED_GND~I_combout\ = GND
@@ -166,7 +186,7 @@ GENERIC MAP (
 PORT MAP (
 	combout => \~QUARTUS_CREATED_GND~I_combout\);
 
--- Location: IOOBUF_X78_Y25_N2
+-- Location: IOOBUF_X46_Y54_N23
 \q~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -174,23 +194,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => VCC,
+	i => \state.SE~q\,
 	devoe => ww_devoe,
 	o => \q~output_o\);
 
--- Location: IOIBUF_X34_Y0_N15
-\a~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a,
-	o => \a~input_o\);
-
--- Location: IOIBUF_X78_Y44_N23
+-- Location: IOIBUF_X0_Y18_N15
 \clk~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -202,7 +210,47 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: IOIBUF_X16_Y0_N8
+-- Location: CLKCTRL_G3
+\clk~inputclkctrl\ : fiftyfivenm_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \clk~inputclkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \clk~inputclkctrl_outclk\);
+
+-- Location: IOIBUF_X46_Y54_N15
+\a~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_a,
+	o => \a~input_o\);
+
+-- Location: LCCOMB_X46_Y53_N18
+\Selector0~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Selector0~0_combout\ = (!\a~input_o\ & !\state.SD~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \a~input_o\,
+	datad => \state.SD~q\,
+	combout => \Selector0~0_combout\);
+
+-- Location: IOIBUF_X0_Y18_N22
 \reset~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -213,6 +261,123 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_reset,
 	o => \reset~input_o\);
+
+-- Location: CLKCTRL_G4
+\reset~inputclkctrl\ : fiftyfivenm_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \reset~inputclkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \reset~inputclkctrl_outclk\);
+
+-- Location: FF_X46_Y53_N19
+\state.SB\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \Selector0~0_combout\,
+	clrn => \ALT_INV_reset~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \state.SB~q\);
+
+-- Location: LCCOMB_X46_Y53_N24
+\nextstate.SC~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \nextstate.SC~0_combout\ = (\a~input_o\ & \state.SB~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \a~input_o\,
+	datad => \state.SB~q\,
+	combout => \nextstate.SC~0_combout\);
+
+-- Location: FF_X46_Y53_N25
+\state.SC\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \nextstate.SC~0_combout\,
+	clrn => \ALT_INV_reset~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \state.SC~q\);
+
+-- Location: LCCOMB_X46_Y53_N6
+\nextstate.SD~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \nextstate.SD~0_combout\ = (\a~input_o\ & \state.SC~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \a~input_o\,
+	datad => \state.SC~q\,
+	combout => \nextstate.SD~0_combout\);
+
+-- Location: FF_X46_Y53_N7
+\state.SD\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \nextstate.SD~0_combout\,
+	clrn => \ALT_INV_reset~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \state.SD~q\);
+
+-- Location: LCCOMB_X46_Y53_N4
+\state.SE~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \state.SE~feeder_combout\ = \state.SD~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \state.SD~q\,
+	combout => \state.SE~feeder_combout\);
+
+-- Location: FF_X46_Y53_N5
+\state.SE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputclkctrl_outclk\,
+	d => \state.SE~feeder_combout\,
+	clrn => \ALT_INV_reset~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \state.SE~q\);
 
 -- Location: UNVM_X0_Y40_N40
 \~QUARTUS_CREATED_UNVM~\ : fiftyfivenm_unvm

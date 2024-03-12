@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/martin/coding/ift1227/devoir2/q2/simulation/modelsim
 Edetecteur
-Z1 w1709310618
+Z1 w1710270478
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
@@ -23,9 +23,9 @@ VMIcbf9?45f6GN]fdEl17l1
 !s100 KM@Kao6:eY=kYJ@7b@TD80
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1709311971
+Z7 !s110 1710270518
 !i10b 1
-Z8 !s108 1709311971.000000
+Z8 !s108 1710270518.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q2/detecteur.vhd|
 Z10 !s107 /home/martin/coding/ift1227/devoir2/q2/detecteur.vhd|
 !i113 1
@@ -38,8 +38,8 @@ DEx4 work 9 detecteur 0 22 MIcbf9?45f6GN]fdEl17l1
 !i122 0
 l14
 L11 27
-VTAPoU0Y5SYnk1MP5VRLo40
-!s100 X0l12;;KN7ABlg_F4IY8S2
+V2GHiYaM_6m;d03_Zdk3E?1
+!s100 ;9NzN:2NC5CAUz35Tf>cb2
 R6
 31
 R7
@@ -51,7 +51,7 @@ R10
 R11
 R12
 Etestbench
-Z13 w1709311936
+Z13 w1709312025
 R2
 R3
 !i122 1
@@ -64,10 +64,10 @@ VfAGSJh;[QX6ckNlW1jkS:2
 !s100 ZghcR5[dL31:EZO;5?S]<1
 R6
 31
-R7
+Z16 !s110 1710270519
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
 !s107 /home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
 !i113 1
 R11
@@ -78,16 +78,16 @@ R3
 DEx4 work 9 testbench 0 22 fAGSJh;[QX6ckNlW1jkS:2
 !i122 1
 l15
-L7 44
-Vloh5k[JmPLADC8B3@<=K[2
-!s100 N?70T1?g__J7JeO;PV^=E2
+L7 43
+VNUilgZRl>HF8_4h?7EaJF3
+!s100 ljWGC3EKzg]D9c[XLYU351
 R6
 31
-R7
+R16
 !i10b 1
 R8
-R16
-Z17 !s107 /home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
+R17
+Z18 !s107 /home/martin/coding/ift1227/devoir2/q2/testbench.vhd|
 !i113 1
 R11
 R12

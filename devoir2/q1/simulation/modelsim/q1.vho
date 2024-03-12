@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
 
--- DATE "03/01/2024 11:02:05"
+-- DATE "03/12/2024 14:55:22"
 
 -- 
 -- Device: Altera 10M50DAF484C7G Package FBGA484
@@ -89,8 +89,8 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	model_struct IS
     PORT (
 	b : IN std_logic_vector(3 DOWNTO 0);
-	affS : OUT std_logic_vector(6 DOWNTO 0);
-	affCh : OUT std_logic_vector(6 DOWNTO 0)
+	affS : BUFFER std_logic_vector(6 DOWNTO 0);
+	affCh : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END model_struct;
 
