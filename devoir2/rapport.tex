@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title{Devoir 2 Rapport}
+\author{Martin Chaperot: 20205638\\ Hamza Ali Ousalah: 20249230}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1}
+\subsection*{a}
+\includegraphics*[width=\textwidth]{q1a}
+\subsection*{b}
+\includegraphics*[width=\textwidth]{q1b}
+\subsection*{c}
+\includegraphics*[width=\textwidth]{q1c}
+\section*{2}
+\subsection*{a}
+\includegraphics*[width=\textwidth]{q2a}
+\subsection*{b}
+\includegraphics*[width=\textwidth]{q2b}
+\subsection*{c}
+\includegraphics*[width=\textwidth]{q2c}
+\pagebreak
+\begin{lstlisting}[language=VHDL]
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity testbench is 
+end testbench;
+
+architecture sim of testbench is
+    component detecteur
+        port(
+                clk, reset, a: in std_logic;
+                q: out std_logic
+        );
+    end component;
+    signal clk, reset, a, q: std_logic;
+begin
+    dut: detecteur port map(clk, reset, a, q);
+    process begin
+        clk <= '0'; reset <= '0'; a <= '0'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "0 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "01 failed";
+        clk <= '0'; a <= '0'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "010 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "0101 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "01011 failed";
+        clk <= '0'; a <= '0'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '1' report "010110 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "0101101 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '0' report "01011011 failed";
+        clk <= '0'; a <= '1'; wait for 10 ns;
+        clk <= '1'; wait for 10 ns;
+        assert q = '1' report "010110111 failed";
+        reset <= '1'; wait for 10 ns;
+        assert q = '0' report "reset failed";
+		  wait;
+    end process;
+end sim;
+\end{lstlisting}
+\end{document}
