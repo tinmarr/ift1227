@@ -1,3 +1,14 @@
+#+title:Devoir 4 Rapport
+#+author:Martin Chaperot: 20205638 Hamza Ali Ousalah: 20249230
+
+* Q1
+** a
+[[./Question_1_a.png]]
+** b
+[[./Question_1_a.png]]
+* Q2
+imem.vhd (Programme de test avec le code assembleur et le code machine)
+#+begin_src vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.all; 
 use STD.TEXTIO.all;
@@ -36,11 +47,17 @@ begin
         mem(18) := X"0022180A"; -- divInt4 $v1, $v0 # ($v1 = $v0 / 4)
         mem(19) := X"ac010028"; -- sw $v1, 40($0) # divInt4 test
         mem(20) := X"0c000015"; -- jal jalTest
-        mem(21) := X""; -- sw $ra, 20($0) # jal test
-        for ii in 20 to 63 loop
+        mem(21) := X"AC3E0014"; -- sw $ra, 30($0) # jal test
+        for ii in 22 to 63 loop
             mem(ii) := X"00000000";
         end loop;  -- ii
         -- read memory
         rd <= mem(CONV_INTEGER(a));
 end process;
 end;
+#+end_src
+* Q3
+** a
+[[./Question_3_a.png]]
+** b
+[[./Question_3_b.png]]

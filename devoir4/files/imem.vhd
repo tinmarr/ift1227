@@ -37,7 +37,7 @@ begin
         mem(19) := X"ac010028"; -- sw $v1, 40($0) # divInt4 test
         mem(20) := X"0c000015"; -- jal jalTest
         mem(21) := X"AC3E0014"; -- sw $ra, 30($0) # jal test
-        for ii in 20 to 63 loop
+        for ii in 22 to 63 loop
             mem(ii) := X"00000000";
         end loop;  -- ii
         -- read memory
